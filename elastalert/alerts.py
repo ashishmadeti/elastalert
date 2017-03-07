@@ -920,12 +920,12 @@ class SlackAlerter(Alerter):
             'username': self.slack_username_override,
             'channel': self.slack_channel_override,
             'parse': self.slack_parse_override,
-            'text': self.slack_text_string,
+            'text': body,
             'attachments': [
                 {
                     'color': self.slack_msg_color,
                     'title': self.create_title(matches),
-                    'text': body,
+                    'text': self.slack_text_string,
                     'fields': []
                 }
             ]
